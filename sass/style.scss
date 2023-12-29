@@ -1,13 +1,11 @@
-$font-primary: 'Work Sans', Arial, sans-serif;
-
-
+$font-primary: "Work Sans", Arial, sans-serif;
 
 // Overrides
-$grid-gutter-width: 40px !default; 
-$border-radius-base:  4px !default;
+$grid-gutter-width: 40px !default;
+$border-radius-base: 4px !default;
 $padding-base-vertical: 14px !default;
 
-$brand-primary: #FC5185 !default;
+$brand-primary: #fc5185 !default;
 
 $brand-white: #fff;
 $brand-black: #000;
@@ -19,10 +17,8 @@ $brand-selection-color: #f9f6f0;
 $brand-overlay-color: #4c4a8a;
 $brand-bg-color: $brand-white;
 
-$input-border-focus:  $brand-primary !default;
-$form-group-margin-bottom:       30px !default;
-
-
+$input-border-focus: $brand-primary !default;
+$form-group-margin-bottom: 30px !default;
 
 // Mixin
 @mixin translateX($translatex) {
@@ -33,52 +29,52 @@ $form-group-margin-bottom:       30px !default;
 	transform: translateX($translatex);
 }
 @mixin transition($transition) {
-    -moz-transition:    all $transition ease;
-    -o-transition:      all $transition ease;
-    -webkit-transition: all $transition ease;
-    -ms-transition: 		all $transition ease;
-    transition:         all $transition ease;
+	-moz-transition: all $transition ease;
+	-o-transition: all $transition ease;
+	-webkit-transition: all $transition ease;
+	-ms-transition: all $transition ease;
+	transition: all $transition ease;
 }
 @mixin inline-block() {
-	display:-moz-inline-stack;
-	display:inline-block;
-	zoom:1;
-	*display:inline;
+	display: -moz-inline-stack;
+	display: inline-block;
+	zoom: 1;
+	*display: inline;
 }
 
 @mixin border-radius($radius) {
-  -webkit-border-radius: $radius;
-     -moz-border-radius: $radius;
-      -ms-border-radius: $radius;
-          border-radius: $radius;
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	border-radius: $radius;
 }
 @mixin flex() {
-	display: -webkit-box;      
-  	display: -moz-box;         
-  	display: -ms-flexbox;      
-  	display: -webkit-flex;     
-  	display: flex;             
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
 }
 @mixin flexwrap() {
 	flex-wrap: wrap;
-	-webkit-flex-wrap: wrap; 
-	-moz-flex-wrap: wrap; 
+	-webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
 }
 
 @font-face {
-	font-family: 'icomoon';
-	src:url('../fonts/icomoon/icomoon.eot?srf3rx');
-	src:url('../fonts/icomoon/icomoon.eot?srf3rx#iefix') format('embedded-opentype'),
-		url('../fonts/icomoon/icomoon.ttf?srf3rx') format('truetype'),
-		url('../fonts/icomoon/icomoon.woff?srf3rx') format('woff'),
-		url('../fonts/icomoon/icomoon.svg?srf3rx#icomoon') format('svg');
+	font-family: "icomoon";
+	src: url("../fonts/icomoon/icomoon.eot?srf3rx");
+	src: url("../fonts/icomoon/icomoon.eot?srf3rx#iefix")
+			format("embedded-opentype"),
+		url("../fonts/icomoon/icomoon.ttf?srf3rx") format("truetype"),
+		url("../fonts/icomoon/icomoon.woff?srf3rx") format("woff"),
+		url("../fonts/icomoon/icomoon.svg?srf3rx#icomoon") format("svg");
 	font-weight: normal;
 	font-style: normal;
 }
 
 @mixin icomoon() {
-	
-	font-family: 'icomoon';
+	font-family: "icomoon";
 	speak: none;
 	font-style: normal;
 	font-weight: normal;
@@ -89,15 +85,11 @@ $form-group-margin-bottom:       30px !default;
 	/* Better Font Rendering =========== */
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	
 }
 
-// Import 
-@import 'bootstrap/mixins';
-@import 'bootstrap/variables';
-
-
-
+// Import
+@import "bootstrap/mixins";
+@import "bootstrap/variables";
 
 /* =======================================================
 *
@@ -118,11 +110,11 @@ body {
 	overflow-x: hidden;
 	width: 100%;
 	height: 100%;
-	@include transition(.5s);
+	@include transition(0.5s);
 	.offcanvas & {
-		overflow: hidden;	
+		overflow: hidden;
 		position: absolute;
-		
+
 		&:after {
 			@include transition(2s);
 			position: absolute;
@@ -131,44 +123,54 @@ body {
 			bottom: 0;
 			left: 0;
 			z-index: 101;
-			background: rgba(0,0,0,.7);
+			background: rgba(0, 0, 0, 0.7);
 			content: "";
 		}
 	}
 }
 a {
 	color: $brand-primary;
-	@include transition(.5s);
-	&:hover, &:active, &:focus {
+	@include transition(0.5s);
+	&:hover,
+	&:active,
+	&:focus {
 		color: $brand-primary;
 		outline: none;
 		text-decoration: none;
 	}
 }
-p, ul, ol {
+p,
+ul,
+ol {
 	margin-bottom: 30px;
 	font-size: 18px;
 	line-height: 38px;
 }
 
-h1, h2, h3, h4, h5, h6, figure {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+figure {
 	color: $brand-black;
 	font-family: $font-primary;
 	font-weight: 400;
 	margin: 0 0 30px 0;
 }
 ::-webkit-selection {
-  color: $brand-white;
-  background: $brand-primary;
+	color: $brand-white;
+	background: $brand-primary;
 }
 
 ::-moz-selection {
-  color: $brand-white;
-  background: $brand-primary;
+	color: $brand-white;
+	background: $brand-primary;
 }
 ::selection {
-  color: $brand-white;
-  background: $brand-primary;
+	color: $brand-white;
+	background: $brand-primary;
 }
 
 .fh5co-nav {
@@ -182,32 +184,33 @@ h1, h2, h3, h4, h5, h6, figure {
 	// @media screen and (max-width: $screen-sm) {
 	// 	padding: 20px 0;
 	// }
-	.top-menu{
-		border-bottom: 1px solid rgba($brand-white,.1);
+	.top-menu {
+		border-bottom: 1px solid rgba($brand-white, 0.1);
 		padding: 28px 0;
 	}
-	.top{
-		border-bottom: 1px solid rgba($brand-white,.1);
+	.top {
+		border-bottom: 1px solid rgba($brand-white, 0.1);
 		padding: 7px 0;
 		margin-bottom: 0;
-		.num, .fh5co-social{
+		.num,
+		.fh5co-social {
 			display: inline-block;
 			margin: 0;
 		}
-		.num{
-			color: rgba($brand-white,.6);
+		.num {
+			color: rgba($brand-white, 0.6);
 			font-size: 13px;
 			padding-right: 20px;
 			margin-right: 10px;
-			border-right: 1px solid rgba($brand-white,.2);
+			border-right: 1px solid rgba($brand-white, 0.2);
 			letter-spacing: 0px;
 		}
-		.fh5co-social{
-			li{
+		.fh5co-social {
+			li {
 				font-size: 14px;
-				a{
+				a {
 					padding: 0 7px;
-					i{
+					i {
 						font-size: 14px;
 					}
 				}
@@ -222,8 +225,8 @@ h1, h2, h3, h4, h5, h6, figure {
 		font-weight: bold;
 		font-weight: 700;
 		font-family: $font-primary;
-		a{
-			span{
+		a {
+			span {
 				color: $brand-primary;
 			}
 		}
@@ -233,7 +236,7 @@ h1, h2, h3, h4, h5, h6, figure {
 		color: $brand-white;
 	}
 	.menu-1 {
-		@media screen and (max-width: $screen-sm ) {
+		@media screen and (max-width: $screen-sm) {
 			display: none;
 		}
 	}
@@ -249,20 +252,22 @@ h1, h2, h3, h4, h5, h6, figure {
 				font-size: 13px;
 				padding: 30px 15px;
 				text-transform: uppercase;
-				color: rgba(255,255,255,.5);
+				color: rgba(255, 255, 255, 0.5);
 				letter-spacing: 2px;
-				@include transition(.5s);
-				&:hover,&:focus, &:active {
-					color: rgba(255,255,255,1);
+				@include transition(0.5s);
+				&:hover,
+				&:focus,
+				&:active {
+					color: rgba(255, 255, 255, 1);
 				}
 			}
 			&.has-dropdown {
 				position: relative;
 				.dropdown {
 					width: 140px;
-					-webkit-box-shadow: 0px 14px 33px -9px rgba(0,0,0,0.75);
-					-moz-box-shadow: 0px 14px 33px -9px rgba(0,0,0,0.75);
-					box-shadow: 0px 14px 33px -9px rgba(0,0,0,0.75);
+					-webkit-box-shadow: 0px 14px 33px -9px rgba(0, 0, 0, 0.75);
+					-moz-box-shadow: 0px 14px 33px -9px rgba(0, 0, 0, 0.75);
+					box-shadow: 0px 14px 33px -9px rgba(0, 0, 0, 0.75);
 					z-index: 1002;
 					visibility: hidden;
 					opacity: 0;
@@ -273,7 +278,7 @@ h1, h2, h3, h4, h5, h6, figure {
 					background: $brand-black;
 					padding: 20px;
 					@include border-radius(4px);
-					@include transition(.0s);
+					@include transition(0s);
 					&:before {
 						bottom: 100%;
 						left: 40px;
@@ -287,7 +292,7 @@ h1, h2, h3, h4, h5, h6, figure {
 						border-width: 8px;
 						margin-left: -8px;
 					}
-					
+
 					li {
 						display: block;
 						margin-bottom: 7px;
@@ -308,13 +313,10 @@ h1, h2, h3, h4, h5, h6, figure {
 						}
 					}
 				}
-				&:hover, &:focus {
+				&:hover,
+				&:focus {
 					a {
 						color: $brand-white;
-					}
-					.dropdown {
-						// visibility: visible;
-						// opacity: 1;
 					}
 				}
 			}
@@ -325,21 +327,21 @@ h1, h2, h3, h4, h5, h6, figure {
 						background: $brand-primary;
 						padding: 4px 20px;
 						@include inline-block;
-						@include transition(.3s);
+						@include transition(0.3s);
 						@include border-radius(100px);
 					}
 					&:hover {
 						span {
-							-webkit-box-shadow: 0px 14px 20px -9px rgba(0,0,0,0.75);
-							-moz-box-shadow: 0px 14px 20px -9px rgba(0,0,0,0.75);
-							box-shadow: 0px 14px 20px -9px rgba(0,0,0,0.75);
+							-webkit-box-shadow: 0px 14px 20px -9px rgba(0, 0, 0, 0.75);
+							-moz-box-shadow: 0px 14px 20px -9px rgba(0, 0, 0, 0.75);
+							box-shadow: 0px 14px 20px -9px rgba(0, 0, 0, 0.75);
 						}
 					}
 				}
 			}
 			&.active {
 				> a {
-					color: $brand-white!important;
+					color: $brand-white !important;
 				}
 			}
 		}
@@ -347,15 +349,14 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 .fh5co-navigation {
 	.prev {
-		@include transition(.5s);
+		@include transition(0.5s);
 		text-align: right;
 		&:hover {
-
 			padding-right: 30px;
 		}
 	}
 	.next {
-		@include transition(.5s);
+		@include transition(0.5s);
 		text-align: left;
 		&:hover {
 			padding-left: 30px;
@@ -374,32 +375,33 @@ h1, h2, h3, h4, h5, h6, figure {
 			left: 0;
 			right: 0;
 			bottom: 0;
-			background: rgba(0, 0, 0, .5);
+			background: rgba(0, 0, 0, 0.5);
 			z-index: 10;
 		}
 		.copy {
 			position: relative;
 			z-index: 12;
-			
+
 			display: block;
 
-			.display-t, .display-tc {
+			.display-t,
+			.display-tc {
 				height: 400px;
 				display: table;
 				width: 100%;
 			}
 			.display-tc {
-				display: table-cell!important;
+				display: table-cell !important;
 				vertical-align: middle;
 				div {
 					padding: 30px;
 					span {
 						display: block;
 						margin-bottom: 10px;
-						color: rgba(255,255,255,.5);
+						color: rgba(255, 255, 255, 0.5);
 						text-transform: uppercase;
 						font-size: 12px;
-						letter-spacing: .05em;
+						letter-spacing: 0.05em;
 					}
 					h2 {
 						margin-bottom: 0;
@@ -408,11 +410,9 @@ h1, h2, h3, h4, h5, h6, figure {
 					}
 				}
 			}
-		}		
+		}
 	}
 }
-
-
 
 #fh5co-aside {
 	width: 38.2%;
@@ -425,6 +425,7 @@ h1, h2, h3, h4, h5, h6, figure {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
+	background-image: url(images/ECOlarge.png);
 
 	.single & {
 		position: relative;
@@ -433,7 +434,7 @@ h1, h2, h3, h4, h5, h6, figure {
 	}
 
 	a {
-		color: rgba(255,255,255,.5);
+		color: rgba(255, 255, 255, 0.5);
 		&:hover {
 			color: $brand-white;
 		}
@@ -445,7 +446,7 @@ h1, h2, h3, h4, h5, h6, figure {
 		z-index: 999;
 		height: 700px;
 	}
-	
+
 	.overlay {
 		position: absolute;
 		top: 0;
@@ -453,14 +454,16 @@ h1, h2, h3, h4, h5, h6, figure {
 		left: 0;
 		right: 0;
 		z-index: 10;
-		background: rgba(0,0,0,.5);
+		background: rgba(0, 0, 0, 0.5);
 	}
-	.featured, nav, .page-title {
+	.featured,
+	nav,
+	.page-title {
 		z-index: 12;
 		position: absolute;
 		bottom: 0;
 		padding: 30px;
-		
+
 		.single & {
 			width: 100%;
 			margin: 0 auto;
@@ -475,10 +478,10 @@ h1, h2, h3, h4, h5, h6, figure {
 		}
 		> span {
 			display: block;
-			color: rgba(255,255,255,.5);
+			color: rgba(255, 255, 255, 0.5);
 			text-transform: uppercase;
 			font-size: 15px;
-			letter-spacing: .05em;
+			letter-spacing: 0.05em;
 			margin-bottom: 10px;
 		}
 	}
@@ -491,7 +494,7 @@ h1, h2, h3, h4, h5, h6, figure {
 	}
 	nav {
 		top: 0;
-		bottom: inherit!important;
+		bottom: inherit !important;
 		.single & {
 			text-align: left;
 		}
@@ -512,21 +515,21 @@ h1, h2, h3, h4, h5, h6, figure {
 					text-align: center;
 					line-height: 30px;
 					@include border-radius(50%);
-					background:rgba(255,255,255,.1);
+					background: rgba(255, 255, 255, 0.1);
 					&:hover {
 						color: $brand-black;
-						background:rgba(255,255,255,1);
+						background: rgba(255, 255, 255, 1);
 					}
 				}
 			}
-		};
+		}
 	}
 }
 footer {
 	background: lighten($brand-black, 98%);
 	clear: both;
 	font-size: 12px;
-	padding: 20px 30px!important;
+	padding: 20px 30px !important;
 	.single & {
 		> div {
 			max-width: 960px;
@@ -555,7 +558,7 @@ footer {
 	display: block;
 	text-transform: uppercase;
 	font-weight: 100;
-	letter-spacing: .05em;
+	letter-spacing: 0.05em;
 }
 .padding {
 	padding: 50px;
@@ -570,7 +573,7 @@ footer {
 		width: 100%;
 		border-bottom: 1px solid lighten($brand-black, 95%);
 		.single & {
-			border-bottom: none!important;
+			border-bottom: none !important;
 		}
 		@media screen and (max-width: $screen-sm) {
 			text-align: left;
@@ -591,7 +594,7 @@ footer {
 			margin-right: 5%;
 			margin-top: 0px;
 			.single & {
-				margin-right: 0!important;
+				margin-right: 0 !important;
 				width: 100%;
 			}
 			@media screen and (max-width: $screen-sm) {
@@ -620,7 +623,6 @@ footer {
 	}
 }
 
-
 .gototop {
 	position: fixed;
 	bottom: 20px;
@@ -628,7 +630,7 @@ footer {
 	z-index: 999;
 	opacity: 0;
 	visibility: hidden;
-	@include transition(.5s);
+	@include transition(0.5s);
 	&.active {
 		opacity: 1;
 		visibility: visible;
@@ -637,7 +639,7 @@ footer {
 		width: 50px;
 		height: 50px;
 		display: table;
-		background: rgba(0,0,0,.5);
+		background: rgba(0, 0, 0, 0.5);
 		color: $brand-white;
 		text-align: center;
 		@include border-radius(4px);
@@ -645,114 +647,118 @@ footer {
 			height: 50px;
 			display: table-cell;
 			vertical-align: middle;
-
 		}
-		&:hover, &:active, &:focus {
+		&:hover,
+		&:active,
+		&:focus {
 			text-decoration: none;
 			outline: none;
 		}
-	}	
+	}
 }
-
-
 
 // Burger Menu
 .fh5co-nav-toggle {
-  width:25px;
-  height:25px;
-  cursor: pointer;
-  text-decoration: none;
-  &.active i {
-		&::before, &::after {
+	width: 25px;
+	height: 25px;
+	cursor: pointer;
+	text-decoration: none;
+	&.active i {
+		&::before,
+		&::after {
 			background: $brand-darker;
 		}
-  }
-  &:hover, &:focus, &:active {
-  	outline: none;
-  	border-bottom: none!important;
-  }
-  i {
-  	position: relative;
-	  display: inline-block;
-	  width: 25px;
-	  height: 2px;
-	  color: #252525;
-	  font:bold 14px/.4 Helvetica;
-	  text-transform: uppercase;
-	  text-indent:-55px;
-	  background: #252525;
-	  transition: all .2s ease-out;
-		 &::before, &::after {
-	  	content:'';
-		  width: 25px;
-		  height: 2px;
-		  background: #252525;
-		  position: absolute;
-		  left:0;
-		  transition:all .2s ease-out;
-	  }
-  }
-  &.fh5co-nav-white {
-  	> i {
-  		color:$brand-white;
-  		background: $brand-white;
-  		&::before, &::after {
-  			background: $brand-white;
-  		}
-  	}
-  }
+	}
+	&:hover,
+	&:focus,
+	&:active {
+		outline: none;
+		border-bottom: none !important;
+	}
+	i {
+		position: relative;
+		display: inline-block;
+		width: 25px;
+		height: 2px;
+		color: #252525;
+		font: bold 14px/0.4 Helvetica;
+		text-transform: uppercase;
+		text-indent: -55px;
+		background: #252525;
+		transition: all 0.2s ease-out;
+		&::before,
+		&::after {
+			content: "";
+			width: 25px;
+			height: 2px;
+			background: #252525;
+			position: absolute;
+			left: 0;
+			transition: all 0.2s ease-out;
+		}
+	}
+	&.fh5co-nav-white {
+		> i {
+			color: $brand-white;
+			background: $brand-white;
+			&::before,
+			&::after {
+				background: $brand-white;
+			}
+		}
+	}
 }
 
 .fh5co-nav-toggle i::before {
-  top: -7px;
+	top: -7px;
 }
 .fh5co-nav-toggle i::after {
-  bottom: -7px;
+	bottom: -7px;
 }
 .fh5co-nav-toggle:hover i::before {
-  top: -10px;
+	top: -10px;
 }
 .fh5co-nav-toggle:hover i::after {
-  bottom: -10px;
+	bottom: -10px;
 }
 .fh5co-nav-toggle.active i {
 	background: transparent;
 }
 .fh5co-nav-toggle.active i::before {
-  top:0;
-  -webkit-transform: rotateZ(45deg);
-     -moz-transform: rotateZ(45deg);
-      -ms-transform: rotateZ(45deg);
-       -o-transform: rotateZ(45deg);
-          transform: rotateZ(45deg);
+	top: 0;
+	-webkit-transform: rotateZ(45deg);
+	-moz-transform: rotateZ(45deg);
+	-ms-transform: rotateZ(45deg);
+	-o-transform: rotateZ(45deg);
+	transform: rotateZ(45deg);
 }
 .fh5co-nav-toggle.active i::after {
-  bottom:0;
-  -webkit-transform: rotateZ(-45deg);
-     -moz-transform: rotateZ(-45deg);
-      -ms-transform: rotateZ(-45deg);
-       -o-transform: rotateZ(-45deg);
-          transform: rotateZ(-45deg);
+	bottom: 0;
+	-webkit-transform: rotateZ(-45deg);
+	-moz-transform: rotateZ(-45deg);
+	-ms-transform: rotateZ(-45deg);
+	-o-transform: rotateZ(-45deg);
+	transform: rotateZ(-45deg);
 }
 .fh5co-nav-toggle {
-  position: absolute;
-  right: 0px;
-  top: 65px;
-  // top: 100px;
-  // left: -100px;;
-  z-index: 21;
-  padding: 6px 0 0 0;
-  display: block;
-  margin: 0 auto;
-  display: none;
-  // background: #f86942;
-  height: 44px;
-  width: 44px;
-  z-index: 2001;
-  border-bottom: none!important;
-  @media screen and (max-width: $screen-sm) {
-  	display: block;
-  }
+	position: absolute;
+	right: 0px;
+	top: 65px;
+	// top: 100px;
+	// left: -100px;;
+	z-index: 21;
+	padding: 6px 0 0 0;
+	display: block;
+	margin: 0 auto;
+	display: none;
+	// background: #f86942;
+	height: 44px;
+	width: 44px;
+	z-index: 2001;
+	border-bottom: none !important;
+	@media screen and (max-width: $screen-sm) {
+		display: block;
+	}
 }
 
 // Buttons
@@ -763,32 +769,38 @@ footer {
 	font-size: 16px;
 	font-weight: 400;
 	@include border-radius(30px);
-	@include transition(.5s);
+	@include transition(0.5s);
 	padding: 8px 20px;
 	&.btn-md {
-		padding: 8px 20px!important;
+		padding: 8px 20px !important;
 	}
 	&.btn-lg {
-		padding: 18px 36px!important;
+		padding: 18px 36px !important;
 	}
-	&:hover, &:active, &:focus {
-		box-shadow: none!important;
-		outline: none!important;
+	&:hover,
+	&:active,
+	&:focus {
+		box-shadow: none !important;
+		outline: none !important;
 	}
 }
 .btn-primary {
 	background: $brand-primary;
 	color: $brand-white;
 	border: 2px solid $brand-primary;
-	&:hover, &:focus, &:active {
-		background: lighten($brand-primary, 5%)!important;
-		border-color: lighten($brand-primary, 5%)!important;
+	&:hover,
+	&:focus,
+	&:active {
+		background: lighten($brand-primary, 5%) !important;
+		border-color: lighten($brand-primary, 5%) !important;
 	}
 	&.btn-outline {
 		background: transparent;
 		color: $brand-primary;
 		border: 2px solid $brand-primary;
-		&:hover, &:focus, &:active {
+		&:hover,
+		&:focus,
+		&:active {
 			background: $brand-primary;
 			color: $brand-white;
 		}
@@ -798,15 +810,19 @@ footer {
 	background: $brand-success;
 	color: $brand-white;
 	border: 2px solid $brand-success;
-	&:hover, &:focus, &:active {
-		background: darken($brand-success, 5%)!important;
-		border-color: darken($brand-success, 5%)!important;
+	&:hover,
+	&:focus,
+	&:active {
+		background: darken($brand-success, 5%) !important;
+		border-color: darken($brand-success, 5%) !important;
 	}
 	&.btn-outline {
 		background: transparent;
 		color: $brand-success;
 		border: 2px solid $brand-success;
-		&:hover, &:focus, &:active {
+		&:hover,
+		&:focus,
+		&:active {
 			background: $brand-success;
 			color: $brand-white;
 		}
@@ -816,15 +832,19 @@ footer {
 	background: $brand-info;
 	color: $brand-white;
 	border: 2px solid $brand-info;
-	&:hover, &:focus, &:active {
-		background: darken($brand-info, 5%)!important;
-		border-color: darken($brand-info, 5%)!important;
+	&:hover,
+	&:focus,
+	&:active {
+		background: darken($brand-info, 5%) !important;
+		border-color: darken($brand-info, 5%) !important;
 	}
 	&.btn-outline {
 		background: transparent;
 		color: $brand-info;
 		border: 2px solid $brand-info;
-		&:hover, &:focus, &:active {
+		&:hover,
+		&:focus,
+		&:active {
 			background: $brand-info;
 			color: $brand-white;
 		}
@@ -834,15 +854,19 @@ footer {
 	background: $brand-warning;
 	color: $brand-white;
 	border: 2px solid $brand-warning;
-	&:hover, &:focus, &:active {
-		background: darken($brand-warning, 5%)!important;
-		border-color: darken($brand-warning, 5%)!important;
+	&:hover,
+	&:focus,
+	&:active {
+		background: darken($brand-warning, 5%) !important;
+		border-color: darken($brand-warning, 5%) !important;
 	}
 	&.btn-outline {
 		background: transparent;
 		color: $brand-warning;
 		border: 2px solid $brand-warning;
-		&:hover, &:focus, &:active {
+		&:hover,
+		&:focus,
+		&:active {
 			background: $brand-warning;
 			color: $brand-white;
 		}
@@ -852,15 +876,19 @@ footer {
 	background: $brand-danger;
 	color: $brand-white;
 	border: 2px solid $brand-danger;
-	&:hover, &:focus, &:active {
-		background: darken($brand-danger, 5%)!important;
-		border-color: darken($brand-danger, 5%)!important;
+	&:hover,
+	&:focus,
+	&:active {
+		background: darken($brand-danger, 5%) !important;
+		border-color: darken($brand-danger, 5%) !important;
 	}
 	&.btn-outline {
 		background: transparent;
 		color: $brand-danger;
 		border: 2px solid $brand-danger;
-		&:hover, &:focus, &:active {
+		&:hover,
+		&:focus,
+		&:active {
 			background: $brand-danger;
 			color: $brand-white;
 		}
@@ -871,15 +899,17 @@ footer {
 	background: none;
 	border: 2px solid lighten($brand-black, 50%);
 	font-size: 16px;
-	@include transition(.3s);
-	&:hover, &:focus, &:active {
+	@include transition(0.3s);
+	&:hover,
+	&:focus,
+	&:active {
 		box-shadow: none;
 	}
 }
 
 .btn.with-arrow {
 	position: relative;
-	@include transition(.3s);
+	@include transition(0.3s);
 	i {
 		visibility: hidden;
 		opacity: 0;
@@ -887,7 +917,7 @@ footer {
 		right: 0px;
 		top: 50%;
 		margin-top: -8px;
-		@include transition(.2s);
+		@include transition(0.2s);
 	}
 	&:hover {
 		padding-right: 50px;
@@ -907,18 +937,19 @@ footer {
 	height: 54px;
 	font-size: 18px;
 	font-weight: 300;
-  	&:active, &:focus {
-  		outline: none;
+	&:active,
+	&:focus {
+		outline: none;
 		box-shadow: none;
 		border-color: $brand-primary;
-  }
+	}
 }
 
 .row-pb-md {
-	padding-bottom: 4em!important;
+	padding-bottom: 4em !important;
 }
 .row-pb-sm {
-	padding-bottom: 2em!important;
+	padding-bottom: 2em !important;
 }
 
 .fh5co-loader {
